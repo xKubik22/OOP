@@ -9,6 +9,7 @@ class transport {
 private:
 	int speed;
 	int distAB;
+	float mass;
 public:
 	static transport* In(ifstream &ifst);
 	virtual void Indata(ifstream &ifst) = 0; // ввод
