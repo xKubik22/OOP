@@ -12,6 +12,7 @@ void container::Out(ofstream &ofst)
 	{
 		ofst << i+1 << ": ";
 		k->data->Out(ofst);
+		ofst << "Time = " << k->data->Time() << endl;
 		k = k->next;
 	}
 }
