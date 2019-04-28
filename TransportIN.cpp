@@ -2,6 +2,7 @@
 #include <fstream>
 #include "Plane.h"
 #include "Train.h"
+#include "Ship.h"
 #include "Transport.h"
 
 using namespace std;
@@ -17,6 +18,9 @@ transport* transport::In(ifstream &ifst)
 		break;
 	case 2:
 		typetransport = new train;
+		break;
+	case 3:
+		typetransport = new ship;
 		break;
 	default:
 		return 0;

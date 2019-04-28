@@ -117,6 +117,7 @@
   <ItemGroup>
     <ClInclude Include="Container.h" />
     <ClInclude Include="Plane.h" />
+    <ClInclude Include="Ship.h" />
     <ClInclude Include="Train.h" />
     <ClInclude Include="Transport.h" />
   </ItemGroup>
@@ -127,6 +128,8 @@
     <ClCompile Include="Main.cpp" />
     <ClCompile Include="PlainIN.cpp" />
     <ClCompile Include="PlaneOUT.cpp" />
+    <ClCompile Include="ShipIN.cpp" />
+    <ClCompile Include="ShipOUT.cpp" />
     <ClCompile Include="TrainIN.cpp" />
     <ClCompile Include="TrainOUT.cpp" />
     <ClCompile Include="TransportIN.cpp" />

@@ -29,6 +29,7 @@ void container::In(ifstream &ifst)
 			current = current->next;
 			current->data = transport::In(ifst);
 			current->next = NULL;
+			count++;
 		}
 	}
 }

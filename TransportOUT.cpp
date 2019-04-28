@@ -2,6 +2,7 @@
 #include <fstream>
 #include "Train.h"
 #include "Plane.h"
+#include "Ship.h"
 #include "Transport.h"
 
 
