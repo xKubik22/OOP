@@ -16,7 +16,32 @@ container::container()
 	head = nullptr;
 	count = 0;
 }
+bool transport::Compare(transport &other) {
+	return Time() > other.Time();
+}void container::Sort() {
+	List* a, *b, *p, *h = NULL;
 
+	for (List* i = head; i != NULL; ) {
+		a = i;
+		i = i->next;
+		b = h;
+		for (p = NULL; (b != NULL) && a->data->Compare(*b->data); ) {
+			p = b;
+			b = b->next;
+		}
+
+		if (p == NULL) {
+			a->next = h;
+			h = a;
+		}
+		else {
+			a->next = b;
+			p->next = a;
+		}
+	}
+	if (h != NULL)
+		head = h;
+}
 void container::Clear()
 {
 
