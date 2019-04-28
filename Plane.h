@@ -10,5 +10,6 @@ class plane : public transport {
 public:
 	void Indata(ifstream &ifst); // ввод
 	void Out(ofstream &ofst); // вывод
+	void Outplane(ofstream &ofst);
 	plane() {} // создание без инициализации.
 };
