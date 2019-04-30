@@ -1,0 +1,59 @@
+Filled container. 
+Container contains 8 elements.
+1: It is ship
+watercapacity = 2
+Type of ship: Tanker
+speed = 12
+distance point to point = 2
+Time = 0.166667
+2: It is train
+quantity = 1
+speed = 16
+distance point to point = 12
+Time = 0.75
+3: It is train
+quantity = 8
+speed = 8
+distance point to point = 8
+Time = 1
+4: It is plane 
+distance = 5
+capacity = 5
+speed = 5
+distance point to point = 5
+Time = 1
+5: It is train
+quantity = 3
+speed = 3
+distance point to point = 3
+Time = 1
+6: It is plane 
+distance = 1
+capacity = 1
+speed = 1
+distance point to point = 1
+Time = 1
+7: It is ship
+watercapacity = 4
+Type of ship: speed = 2
+distance point to point = 4
+Time = 2
+Only plane.
+1: 
+2: 
+3: 
+4: It is plane 
+distance = 5
+capacity = 5
+speed = 5
+distance point to point = 5
+Time = 1
+5: 
+6: It is plane 
+distance = 1
+capacity = 1
+speed = 1
+distance point to point = 1
+Time = 1
+7: 
+Empty container. 

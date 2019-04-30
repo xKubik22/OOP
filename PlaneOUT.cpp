@@ -10,4 +10,4 @@ void plane::Out(ofstream &ofst)
 void plane::Outplane(ofstream &ofst) 
 {
 	Out(ofst);
-}
+}
