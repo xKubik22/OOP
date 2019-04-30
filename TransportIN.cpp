@@ -29,3 +29,6 @@ transport* transport::In(ifstream &ifst)
 	ifst >> typetransport->distAB >> typetransport->speed;
 	return typetransport;
 }
+void transport::Outplane(ofstream &ofst) {
+	ofst << endl; // пустая строка
+}
