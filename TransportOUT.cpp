@@ -10,7 +10,7 @@ using namespace std;
 
 void transport::OutCommon(ofstream &ofst)
 {
-	ofst << "speed = " << speed << endl << "distance point to point = " << distAB << endl << "Time = " << Time() << endl;;
+	ofst << "speed = " << speed << endl << "distance point to point = " << distAB << endl << "Time = " << Time() << endl << "Now mass = " << mass << endl;
 }
 double transport::Time()
 {

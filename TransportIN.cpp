@@ -26,7 +26,7 @@ transport* transport::In(ifstream &ifst)
 		return 0;
 	}
 	typetransport->Indata(ifst);
-	ifst >> typetransport->distAB >> typetransport->speed;
+	ifst >> typetransport->distAB >> typetransport->speed >> typetransport->mass;
 	return typetransport;
 }
 void transport::Outplane(ofstream &ofst) {
