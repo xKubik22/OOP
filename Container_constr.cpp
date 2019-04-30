@@ -17,15 +17,19 @@ container::container()
 	count = 0;
 }
 bool transport::Compare(transport &other) {
-	return Time() > other.Time();
-}void container::Sort() {
+	if (this!=NULL&&other.distAB!=NULL)
+	{
+		return Time() > other.Time();
+	}
+}
+void container::Sort() {
 	List* a, *b, *p, *h = NULL;
 
 	for (List* i = head; i != NULL; ) {
 		a = i;
 		i = i->next;
 		b = h;
-		for (p = NULL; (b != NULL) && a->data->Compare(*b->data); ) {
+		for (p = NULL; (b != NULL) &&a->data->Compare(*b->data); ) {
 			p = b;
 			b = b->next;
 		}
@@ -41,7 +45,8 @@ bool transport::Compare(transport &other) {
 	}
 	if (h != NULL)
 		head = h;
-}
+}
+
 void container::Clear()
 {
 

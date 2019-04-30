@@ -31,4 +31,4 @@ transport* transport::In(ifstream &ifst)
 }
 void transport::Outplane(ofstream &ofst) {
 	ofst << endl; // пустая строка
-}
+}
