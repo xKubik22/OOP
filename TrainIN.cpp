@@ -1,9 +1,12 @@
 #include <fstream>
 #include <iostream>
+#include <string>
+
 #include "Train.h"
+
 using namespace std;
 
 void train::Indata(ifstream &ifst)
 {
-	ifst >> quant;
+	quant = stoi(FileRead(ifst));
 }

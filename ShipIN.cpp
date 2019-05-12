@@ -1,23 +1,38 @@
 #include <fstream>
 #include <iostream>
+#include <string>
+
 #include "Ship.h"
+
 using namespace std;
+
 void ship::Indata(ifstream &ifst)
 {
-	int type;
-	ifst >> water>>type;
-	switch (type)
+	int types;
+	water = stoi(FileRead(ifst));
+	types = stoi(FileRead(ifst));
+	if (types == 1)
 	{
-	case 1:
 		typeship = Lainer;
-		break;
-	case 2:
-		typeship = Tanker;
-		break;
-	case 3:
-		typeship = Tug;
-		break;
-	default:
-		break;
 	}
+	else 
+	{
+		if (types == 2)
+		{
+			typeship = Tanker;
+		}
+		else
+		{
+			if (types == 3) 
+			{
+				typeship = Tug;
+			}
+			else
+			{
+				cout << "ERROR IN FAILIN.TXT";
+				exit(0);
+			}
+		}
+	}
+		
 }

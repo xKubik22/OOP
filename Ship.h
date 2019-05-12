@@ -1,16 +1,20 @@
 #pragma once
 #include <iostream>
 #include <fstream>
+
 #include "Transport.h"
+
 using namespace std;
-enum type { Lainer, Tanker, Tug };
+
 class ship : public transport
 {
-	int water; 
-	type typeship;
+	int water; // параметр
+	enum type {Lainer, Tanker, Tug }; // определение типа судна
+	type typeship; // параметр
 public:
-	// переопределяем интерфейс класса
-	void Indata(ifstream &ifst);
-	void Out(ofstream &ofst);
-	ship() {}
-};
+	void Indata(ifstream &ifst); // ввод
+	void Out(ofstream &ofst); // вывод
+	string Get_all(); // тестовая функция
+	ship() {} // переопределяем интерфейс класса
+};
+

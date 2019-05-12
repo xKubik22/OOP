@@ -1,9 +1,13 @@
 #include <fstream>
 #include <iostream>
+#include <string>
+
 #include "Plane.h"
+
 using namespace std;
 
 void plane::Indata(ifstream &ifst)
 {
-	ifst >> dist >> cap;
+	dist = stoi(FileRead(ifst));
+	cap = stoi(FileRead(ifst));
 }

@@ -1,19 +1,16 @@
 #include <iostream>
 #include <fstream>
+
 #include "Container.h"
 
-
 using namespace std;
-
-//namespace simple_shapes { 
 
 void container::In(ifstream &ifst)
 {
 	List* current = head;
 	List* head2 = new List;
-	while (!ifst.eof()) {
-		//новый элемент списка
-
+	while (!ifst.eof()) 
+	{
 
 		if (count == 0)
 		{

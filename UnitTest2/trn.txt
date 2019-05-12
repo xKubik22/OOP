@@ -1,0 +1,6 @@
+It is train
+quantity = 10
+speed = 20
+distance point to point = 30
+Time = 1.5
+Now mass = 40

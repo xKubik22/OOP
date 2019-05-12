@@ -1,0 +1,7 @@
+It is ship
+watercapacity = 5
+Type of ship: Lainer
+speed = 7
+distance point to point = 8
+Time = 1.14286
+Now mass = 9
