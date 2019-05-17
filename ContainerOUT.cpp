@@ -5,11 +5,11 @@
 
 using namespace std;
 
-void container::Out(ofstream &ofst)
+void Container::Out(ofstream &ofst)
 {
 	ofst << "Container contains " << count + 1 << " elements." << endl;
 	List *k = head;
-	//transport t;
+	//Transport t;
 	for (int i = 0; i < count; i++)
 	{
 		ofst << i+1 << ": ";
@@ -19,10 +19,10 @@ void container::Out(ofstream &ofst)
 	}
 	
 }
-void container::Onlyplane(ofstream &ofst)
+void Container::Onlyplane(ofstream &ofst)
 {
 	List* m = head;
-	ofst << "Only plane." << endl;
+	ofst << "Only Plane." << endl;
 	for (int i = 0; i < count; i++)
 	{
 		ofst << i + 1 << ": ";

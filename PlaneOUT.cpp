@@ -5,12 +5,12 @@
 
 using namespace std;
 
-void plane::Out(ofstream &ofst)
+void Plane::Out(ofstream &ofst)
 {
-	ofst << "It is plane " << endl << "distance = " << dist << endl << "capacity = " << cap << endl;
+	ofst << "It is Plane " << endl << "distance = " << dist << endl << "capacity = " << cap << endl;
 	OutCommon(ofst);
 }
-void plane::Outplane(ofstream &ofst) 
+void Plane::Outplane(ofstream &ofst) 
 {
 	Out(ofst);
 }

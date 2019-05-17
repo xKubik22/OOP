@@ -3,8 +3,8 @@
 #include "Train.h"
 using namespace std;
 
-void train::Out(ofstream &ofst)
+void Train::Out(ofstream &ofst)
 {
-	ofst << "It is train" << endl << "quantity = " << quant << endl;
+	ofst << "It is Train" << endl << "quantity = " << quant << endl;
 	OutCommon(ofst);
 }

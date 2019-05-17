@@ -6,7 +6,7 @@
 
 using namespace std;
 
-void ship::Indata(ifstream &ifst)
+void Ship::Indata(ifstream &ifst)
 {
 	int types;
 	water = stoi(FileRead(ifst));
@@ -35,4 +35,19 @@ void ship::Indata(ifstream &ifst)
 		}
 	}
 		
+}
+
+void Ship::MMplane(ofstream & ofst)
+{
+	ofst << "Plane and Ship" << endl;
+}
+
+void Ship::MMtrain(ofstream & ofst)
+{
+	ofst << "Train and Ship" << endl;
+}
+
+void Ship::MMship(ofstream & ofst)
+{
+	ofst << "Ship and Ship" << endl;
 }

@@ -5,9 +5,9 @@
 
 using namespace std;
 
-void ship::Out(ofstream &ofst)
+void Ship::Out(ofstream &ofst)
 {
-	ofst << "It is ship" << endl << "watercapacity = " << water << endl << "Type of ship: ";
+	ofst << "It is Ship" << endl << "watercapacity = " << water << endl << "Type of Ship: ";
 	if (typeship == Lainer) 
 	{
 		ofst << "Lainer" << endl;
@@ -26,7 +26,7 @@ void ship::Out(ofstream &ofst)
 			}
 			else 
 			{
-				ofst << "Incorrect type of ship" << endl;
+				ofst << "Incorrect type of Ship" << endl;
 			}
 		}
 	}

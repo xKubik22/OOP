@@ -7,7 +7,7 @@ using namespace std;
 
 //namespace simple_shapes { 
 
-void container::In(ifstream &ifst)
+void Container::In(ifstream &ifst)
 {
 	List* current = head;
 	List* head2 = new List;
@@ -17,7 +17,7 @@ void container::In(ifstream &ifst)
 
 		if (count == 0)
 		{
-			head2->data = transport::In(ifst);
+			head2->data = Transport::In(ifst);
 			head2->next = NULL;
 			count++;
 			current = head2;
@@ -27,7 +27,7 @@ void container::In(ifstream &ifst)
 		{
 			current->next = new List;
 			current = current->next;
-			current->data = transport::In(ifst);
+			current->data = Transport::In(ifst);
 			current->next = NULL;
 			count++;
 		}

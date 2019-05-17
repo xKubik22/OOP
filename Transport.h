@@ -4,7 +4,7 @@
 
 using namespace std;
 
-class transport 
+class Transport 
 {
 private:
 	// параметры
@@ -12,10 +12,10 @@ private:
 	int distAB;
 	float mass;
 public:
-	static transport* In(ifstream &ifst); // ввод
+	static Transport* In(ifstream &ifst); // ввод
 	static string FileRead(ifstream &ifst); // для коректного чтения
 	double Time(); // вычисление времени
-	bool Compare(transport &other); // сравнение дял сортировки
+	bool Compare(Transport &other); // сравнение дял сортировки
 	virtual void Indata(ifstream &ifst) = 0; // ввод
 	virtual void Out(ofstream &ofst) = 0; // вывод
 	virtual void Outplane(ofstream &ofst); // вывод только самолетов
@@ -25,4 +25,8 @@ public:
 	int Get_distAB();
 	float Get_mass();
 	virtual string Get_all() = 0;
+	virtual void MultiMethod(Transport *other, ofstream &ofst) = 0;//мультиметоды
+	virtual void MMplane(ofstream &ofst) = 0;//мультиметоды
+	virtual void MMtrain(ofstream &ofst) = 0;//мультиметоды
+	virtual void MMship(ofstream &ofst) = 0;//мультиметоды
 };

@@ -25,15 +25,16 @@ int main(int argc, char* argv[])
 	}
 	cout << "Start" << endl;
 	setlocale(LC_ALL, "Russian");
-	container c;
+	Container c;
 	c.In(ifst);
-	ofst << "Filled container. " << endl;
+	ofst << "Filled Container. " << endl;
 	c.Out(ofst);
+	//c.MultiMethod(ofst);
 	c.Sort();
 	c.Out(ofst);
 	c.Onlyplane(ofst);
 	c.Clear();
-	ofst << "Empty container. " << endl;
+	ofst << "Empty Container. " << endl;
 	cout << "Stop" << endl;
 	system("pause");
 	return 0;

@@ -10,24 +10,24 @@
 
 using namespace std;
 
-transport* transport::In(ifstream &ifst)
+Transport* Transport::In(ifstream &ifst)
 {
-	transport* typetransport;
+	Transport* typetransport;
 	int k;
 	k = stoi(FileRead(ifst));
 	switch (k)
 	{
 	case 1:
-		typetransport = new plane;
+		typetransport = new Plane;
 		break;
 	case 2:
-		typetransport = new train;
+		typetransport = new Train;
 		break;
 	case 3:
-		typetransport = new ship;
+		typetransport = new Ship;
 		break;
 	default:
-		cout << "Uncorrected transport type" << endl;
+		cout << "Uncorrected Transport type" << endl;
 		system("pause");
 		exit(0);
 	}
@@ -37,32 +37,53 @@ transport* transport::In(ifstream &ifst)
 	typetransport->mass = stof(FileRead(ifst));
 	return typetransport;
 }
-void transport::Outplane(ofstream &ofst) 
+void Transport::Outplane(ofstream &ofst) 
 {
 	ofst << endl; // пустая строка
 }
+
+void Plane::MultiMethod(Transport* other, ofstream & ofst)
+{
+	other->MMplane(ofst);
+}
+
+void Train::MultiMethod(Transport* other, ofstream & ofst)
+{
+	other->MMtrain(ofst);
+}
+
+void Ship::MultiMethod(Transport* other, ofstream & ofst)
+{
+	other->MMship(ofst);
+}
+
 //Тестовые функции
-int transport::Get_distAB()
+int Transport::Get_distAB()
 {
 	return this->distAB;
 }
-int transport::Get_speed()
+
+int Transport::Get_speed()
 {
 	return this->speed;
 }
-float transport::Get_mass()
+
+float Transport::Get_mass()
 {
 	return this->mass;
 }
-string plane::Get_all()
+
+string Plane::Get_all()
 {
 	return to_string(this->cap) + to_string(this->dist);
 }
-string train::Get_all()
+
+string Train::Get_all()
 {
 	return to_string(this->quant);
 }
-string ship::Get_all()
+
+string Ship::Get_all()
 {
 	return to_string(this->typeship) + to_string(this->water);
 }

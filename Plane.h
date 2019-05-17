@@ -6,7 +6,7 @@
 
 using namespace std;
 
-class plane : public transport
+class Plane : public Transport
 {
 	// параметры
 	int dist; 
@@ -16,5 +16,9 @@ public:
 	void Out(ofstream &ofst); // вывод
 	void Outplane(ofstream &ofst); // вывод только одного типа
 	string Get_all(); // тест
-	plane() {} // создание без инициализации.
+	void MultiMethod(Transport* other, ofstream &ofst);//мультиметоды
+	void MMplane(ofstream &ofst);//мультиметоды
+	void MMtrain(ofstream &ofst);//мультиметоды
+	void MMship(ofstream &ofst);//мультиметоды
+	Plane() {} // создание без инициализации.
 };

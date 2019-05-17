@@ -27,7 +27,7 @@ namespace UnitTest2
 		TEST_METHOD(PlaneOut_test)
 		{
 			ifstream ifst("C:\\Users\\Кирилл\\source\\repos\\LB1--class\\UnitTest2\\filein.txt");
-			transport* test = transport::In(ifst);
+			Transport* test = Transport::In(ifst);
 			ofstream ofst("C:\\Users\\Кирилл\\source\\repos\\LB1--class\\UnitTest2\\fileout.txt");
 			test->Out(ofst);
 			ifstream ifstr("C:\\Users\\Кирилл\\source\\repos\\LB1--class\\UnitTest2\\pln.txt");
@@ -49,8 +49,8 @@ namespace UnitTest2
 		TEST_METHOD(TrainOut)
 		{
 			ifstream ifst("C:\\Users\\Кирилл\\source\\repos\\LB1--class\\UnitTest2\\filein.txt");
-			transport* test = transport::In(ifst);
-			test = transport::In(ifst);
+			Transport* test = Transport::In(ifst);
+			test = Transport::In(ifst);
 			ofstream ofst("C:\\Users\\Кирилл\\source\\repos\\LB1--class\\UnitTest2\\fileout.txt");
 			test->Out(ofst);
 			ifstream ifstr("C:\\Users\\Кирилл\\source\\repos\\LB1--class\\UnitTest2\\trn.txt");
@@ -72,9 +72,9 @@ namespace UnitTest2
 		TEST_METHOD(ShipOut)
 		{
 			ifstream ifst("C:\\Users\\Кирилл\\source\\repos\\LB1--class\\UnitTest2\\filein.txt");
-			transport* test = transport::In(ifst);
-			test = transport::In(ifst);
-			test = transport::In(ifst);
+			Transport* test = Transport::In(ifst);
+			test = Transport::In(ifst);
+			test = Transport::In(ifst);
 			ofstream ofst("C:\\Users\\Кирилл\\source\\repos\\LB1--class\\UnitTest2\\fileout.txt");
 			test->Out(ofst);
 			ifstream ifstr("C:\\Users\\Кирилл\\source\\repos\\LB1--class\\UnitTest2\\shp.txt");
@@ -96,7 +96,7 @@ namespace UnitTest2
 		TEST_METHOD(TransportOut)
 		{
 			ifstream ifst("C:\\Users\\Кирилл\\source\\repos\\LB1--class\\UnitTest2\\filein.txt");
-			transport* test = transport::In(ifst);
+			Transport* test = Transport::In(ifst);
 			ofstream ofst("C:\\Users\\Кирилл\\source\\repos\\LB1--class\\UnitTest2\\fileout.txt");
 			test->OutCommon(ofst);
 			ifstream ifstr("C:\\Users\\Кирилл\\source\\repos\\LB1--class\\UnitTest2\\trsp.txt");
@@ -118,7 +118,7 @@ namespace UnitTest2
 		TEST_METHOD(ContainerOut)
 		{
 			ifstream ifst("C:\\Users\\Кирилл\\source\\repos\\LB1--class\\UnitTest2\\filein.txt");
-			container test;
+			Container test;
 			test.In(ifst);
 			ofstream ofst("C:\\Users\\Кирилл\\source\\repos\\LB1--class\\UnitTest2\\fileout.txt");
 			test.Out(ofst);
@@ -141,7 +141,7 @@ namespace UnitTest2
 		TEST_METHOD(Onlyplane)
 		{
 			ifstream ifst("C:\\Users\\Кирилл\\source\\repos\\LB1--class\\UnitTest2\\filein.txt");
-			container test;
+			Container test;
 			test.In(ifst);
 			ofstream ofst("C:\\Users\\Кирилл\\source\\repos\\LB1--class\\UnitTest2\\fileout.txt");
 			test.Onlyplane(ofst);
@@ -168,7 +168,7 @@ namespace UnitTest2
 		TEST_METHOD(timetest)
 		{
 			ifstream ifst("C:\\Users\\Кирилл\\source\\repos\\LB1--class\\UnitTest2\\filein.txt");
-			transport *test = transport::In(ifst);
+			Transport *test = Transport::In(ifst);
 			test->Time();
 			double testTime = 0.75;
 			Assert::AreEqual(testTime, test->Time());
@@ -176,8 +176,8 @@ namespace UnitTest2
 		TEST_METHOD(compare)
 		{
 			ifstream ifst("C:\\Users\\Кирилл\\source\\repos\\LB1--class\\UnitTest2\\filein.txt");
-			transport *test = transport::In(ifst);
-			transport *test2 = transport::In(ifst);
+			Transport *test = Transport::In(ifst);
+			Transport *test2 = Transport::In(ifst);
 			bool compar = false;
 			Assert::AreEqual(compar, test->Compare(*test2));
 		}
@@ -187,7 +187,7 @@ namespace UnitTest2
 	public:
 		TEST_METHOD(sortfunct)
 		{
-			container c;
+			Container c;
 			ifstream ifst("C:\\Users\\Кирилл\\source\\repos\\LB1--class\\UnitTest2\\filein.txt");
 			c.In(ifst);
 			ofstream ofst("C:\\Users\\Кирилл\\source\\repos\\LB1--class\\UnitTest2\\fileout.txt");
@@ -220,7 +220,7 @@ namespace UnitTest2
 			int distAB_test = 30;
 			float mass_test = 20.0;
 			ifstream ifst("C:\\Users\\Кирилл\\source\\repos\\LB1--class\\UnitTest2\\filein.txt");
-			transport *test = transport::In(ifst);
+			Transport *test = Transport::In(ifst);
 			Assert::AreEqual(distAB_test, test->Get_distAB());
 			Assert::AreEqual(speed_test, test->Get_speed());
 			Assert::AreEqual(mass_test, test->Get_mass());
@@ -234,7 +234,7 @@ namespace UnitTest2
 			int key;
 			ifstream ifst("C:\\Users\\Кирилл\\source\\repos\\LB1--class\\UnitTest2\\filein.txt");
 			ifst >> key;
-			plane test;
+			Plane test;
 			test.Indata(ifst);
 			Assert::AreEqual(to_string(cap_test) + to_string(dist_test), test.Get_all());
 
@@ -245,7 +245,7 @@ namespace UnitTest2
 			int key;
 			ifstream ifst("C:\\Users\\Кирилл\\source\\repos\\LB1--class\\UnitTest2\\trnin.txt");
 			ifst >> key;
-			train test;
+			Train test;
 			test.Indata(ifst);
 			Assert::AreEqual(to_string(quant_test), test.Get_all());
 
@@ -256,7 +256,7 @@ namespace UnitTest2
 			type typeship_test = Lainer;
 			int water_test = 5;
 			int key;
-			ship test;
+			Ship test;
 			ifstream ifst("C:\\Users\\Кирилл\\source\\repos\\LB1--class\\UnitTest2\\shpin.txt");
 
 			ifst >> key;
@@ -267,7 +267,7 @@ namespace UnitTest2
 		TEST_METHOD(containerin_test)
 		{
 			int count_test = 3;
-			container test;
+			Container test;
 			ifstream ifst("C:\\Users\\Кирилл\\source\\repos\\LB1--class\\UnitTest2\\filein.txt");
 			test.In(ifst);
 			Assert::AreEqual(count_test, test.Get_count());

@@ -6,7 +6,7 @@
 
 using namespace std;
 
-string transport::FileRead(ifstream &ifst)
+string Transport::FileRead(ifstream &ifst)
 {
 	string workstr = "";
 	bool Number = true;

@@ -6,23 +6,23 @@
 using namespace std;
 
 
-container::List::List()
+Container::List::List()
 {
 	this->next = nullptr;
 	this->data = nullptr;
 }
-container::container()
+Container::Container()
 {
 	head = nullptr;
 	count = 0;
 }
-bool transport::Compare(transport &other) {
+bool Transport::Compare(Transport &other) {
 	if (this!=NULL&&other.distAB!=NULL)
 	{
 		return Time() > other.Time();
 	}
 }
-void container::Sort() {
+void Container::Sort() {
 	List* a, *b, *p, *h = NULL;
 
 	for (List* i = head; i != NULL; ) {
@@ -47,7 +47,7 @@ void container::Sort() {
 		head = h;
 }
 
-void container::Clear()
+void Container::Clear()
 {
 
 	while (count != 0)
@@ -60,7 +60,7 @@ void container::Clear()
 	delete head;
 
 }
-int container::Get_count()
+int Container::Get_count()
 {
 	return this->count;
 }
